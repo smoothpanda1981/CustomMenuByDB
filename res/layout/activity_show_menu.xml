@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="@color/background_color" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_of_menu" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonDone"
+        android:layout_alignBottom="@+id/buttonDone"
+        android:layout_alignParentRight="true"
+        android:onClick="onClickCancel"
+        android:text="@string/cancel" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonAddMenu"
+        android:layout_below="@+id/textView1" >
+      
+	    <LinearLayout
+	        android:id="@+id/layout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:orientation="vertical" >    
+	    </LinearLayout>
+
+	</ScrollView>
+
+    <Button
+        android:id="@+id/buttonDeleteMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonAddMenu"
+        android:layout_alignBottom="@+id/buttonAddMenu"
+        android:layout_alignRight="@+id/scroll"
+        android:onClick="onClickDeleteMenu"
+        android:text="@string/delete_menu" />
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scroll"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClickDone"
+        android:text="@string/done" />
+
+    <Button
+        android:id="@+id/buttonAddMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonDone"
+        android:layout_alignLeft="@+id/buttonDone"
+        android:onClick="onClickAddMenu"
+        android:text="@string/add_menu" />
+	
+</RelativeLayout>

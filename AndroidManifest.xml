@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yan.wang.custom.menu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.yan.wang.custom.menu.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ShowPeopleActivity"
+            android:label="ShowPeopleActivity" >
+            <intent-filter>
+                <action android:name="com.yan.wang.custom.menu.ShowPeopleActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ShowMenuActivity"
+            android:label="ShowMenuActivity" >
+            <intent-filter>
+                <action android:name="com.yan.wang.custom.menu.ShowMenuActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+         </activity>
+         <activity
+            android:name=".ShowMenuByPersonActivity"
+            android:label="ShowMenuByPersonActivity" >
+            <intent-filter>
+                <action android:name="com.yan.wang.custom.menu.ShowMenuByPersonActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddPeopleActivity"
+            android:label="AddPeopleActivity" >
+            <intent-filter>
+                <action android:name="com.yan.wang.custom.menu.AddPeopleActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddMenuActivity"
+            android:label="AddMenuActivity" >
+            <intent-filter>
+                <action android:name="com.yan.wang.custom.menu.AddMenuActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
